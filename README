@@ -1,0 +1,9 @@
+Steps to use this repository:
+* Build and install your architecture's toolchain to a directory, referred to below as <TOOLCHAIN_DIRECTORY>. This must be an absolute path.
+* Build and install your BSP to an installed BSP directory, referred to below as <BSP_DIRECTORY>. This must be an absolute path.
+* Run "git submodule init"
+* Run "git submodule update"
+* Run "./waf configure" with the following options:
+** --prefix="<BSP_DIRECTORY>"
+** --rtems-tools="absolute/path/to/toolchain/directory"
+* Run "./waf" to build the example binary
